@@ -1,0 +1,26 @@
+[2023-01-17T22:46:26.145+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2023-01-15T00:00:00+00:00 [queued]>
+[2023-01-17T22:46:26.176+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2023-01-15T00:00:00+00:00 [queued]>
+[2023-01-17T22:46:26.176+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-17T22:46:26.177+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-01-17T22:46:26.177+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-17T22:46:26.224+0000] {taskinstance.py:1383} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-01-15 00:00:00+00:00
+[2023-01-17T22:46:26.242+0000] {standard_task_runner.py:55} INFO - Started process 142 to run task
+[2023-01-17T22:46:26.253+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extract_user', 'scheduled__2023-01-15T00:00:00+00:00', '--job-id', '181', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmp2db1mc6w']
+[2023-01-17T22:46:26.256+0000] {standard_task_runner.py:83} INFO - Job 181: Subtask extract_user
+[2023-01-17T22:46:26.595+0000] {task_command.py:376} INFO - Running <TaskInstance: user_processing.extract_user scheduled__2023-01-15T00:00:00+00:00 [running]> on host 274e1da73cdf
+[2023-01-17T22:46:26.939+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-15T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-15T00:00:00+00:00
+[2023-01-17T22:46:26.940+0000] {http.py:121} INFO - Calling HTTP method
+[2023-01-17T22:46:26.961+0000] {base.py:71} INFO - Using connection ID 'user_api' for task execution.
+[2023-01-17T22:46:26.963+0000] {http.py:148} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-01-17T22:46:27.300+0000] {http.py:125} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Jordan","last":"Singh"},"location":{"street":{"number":2916,"name":"Papanui Road"},"city":"Lower Hutt","state":"West Coast","country":"New Zealand","postcode":12846,"coordinates":{"latitude":"55.6555","longitude":"-65.0389"},"timezone":{"offset":"+3:00","description":"Baghdad, Riyadh, Moscow, St. Petersburg"}},"email":"jordan.singh@example.com","login":{"uuid":"9a84a6f0-a135-4829-aef9-6fc01807dedf","username":"yellowmeercat444","password":"vader","salt":"OfouGjMj","md5":"1b96e65fa80259dfedbbd5d568a580a0","sha1":"d37e682d063a5e75d600a43c8996a6683eb5bf2b","sha256":"abc4483463d99391b39cca0da17add16b7b48dd0cb1ea5a40b6ecb5e5f56ff0e"},"dob":{"date":"1999-06-10T21:55:12.887Z","age":23},"registered":{"date":"2017-11-06T09:28:55.667Z","age":5},"phone":"(150)-489-8914","cell":"(199)-781-4304","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/men/2.jpg","medium":"https://randomuser.me/api/portraits/med/men/2.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/2.jpg"},"nat":"NZ"}],"info":{"seed":"21bb103ec9e302ca","results":1,"page":1,"version":"1.4"}}
+[2023-01-17T22:46:27.372+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extract_user, execution_date=20230115T000000, start_date=20230117T224626, end_date=20230117T224627
+[2023-01-17T22:46:27.468+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-01-17T22:46:27.573+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

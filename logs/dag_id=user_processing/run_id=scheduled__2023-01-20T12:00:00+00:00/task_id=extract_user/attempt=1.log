@@ -1,0 +1,26 @@
+[2023-01-26T20:22:12.596+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2023-01-20T12:00:00+00:00 [queued]>
+[2023-01-26T20:22:12.608+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2023-01-20T12:00:00+00:00 [queued]>
+[2023-01-26T20:22:12.608+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-26T20:22:12.608+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-01-26T20:22:12.608+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-26T20:22:12.623+0000] {taskinstance.py:1383} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-01-20 12:00:00+00:00
+[2023-01-26T20:22:12.628+0000] {standard_task_runner.py:55} INFO - Started process 121 to run task
+[2023-01-26T20:22:12.631+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extract_user', 'scheduled__2023-01-20T12:00:00+00:00', '--job-id', '316', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmp5filipqi']
+[2023-01-26T20:22:12.633+0000] {standard_task_runner.py:83} INFO - Job 316: Subtask extract_user
+[2023-01-26T20:22:12.706+0000] {task_command.py:376} INFO - Running <TaskInstance: user_processing.extract_user scheduled__2023-01-20T12:00:00+00:00 [running]> on host a353ca64b4e2
+[2023-01-26T20:22:12.778+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-20T12:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-20T12:00:00+00:00
+[2023-01-26T20:22:12.779+0000] {http.py:121} INFO - Calling HTTP method
+[2023-01-26T20:22:12.786+0000] {base.py:71} INFO - Using connection ID 'user_api' for task execution.
+[2023-01-26T20:22:12.787+0000] {http.py:148} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-01-26T20:22:13.325+0000] {http.py:125} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Surabhi","last":"Mendonsa"},"location":{"street":{"number":4389,"name":"Swargate"},"city":"Mangalore","state":"Kerala","country":"India","postcode":33617,"coordinates":{"latitude":"12.4143","longitude":"22.7074"},"timezone":{"offset":"-5:00","description":"Eastern Time (US & Canada), Bogota, Lima"}},"email":"surabhi.mendonsa@example.com","login":{"uuid":"e8e37e98-4b3c-48ae-ab7c-b05932f946e1","username":"silverpanda112","password":"jerry1","salt":"TpVHO4yT","md5":"5c3bac5175139df2d22b94aa08dfb6e5","sha1":"a09541629f8c3ddb0b2d4b8b75f39989a6ac5d41","sha256":"1f7812e1690ce0041f9ff5320dee044ad7900dc7e7dd8a3efb1582527d2b9575"},"dob":{"date":"1963-09-02T17:05:53.955Z","age":59},"registered":{"date":"2013-12-21T07:10:15.017Z","age":9},"phone":"7962491227","cell":"8975774794","id":{"name":"UIDAI","value":"100029625838"},"picture":{"large":"https://randomuser.me/api/portraits/women/19.jpg","medium":"https://randomuser.me/api/portraits/med/women/19.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/19.jpg"},"nat":"IN"}],"info":{"seed":"5343d5b08a5cd43a","results":1,"page":1,"version":"1.4"}}
+[2023-01-26T20:22:13.345+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extract_user, execution_date=20230120T120000, start_date=20230126T202212, end_date=20230126T202213
+[2023-01-26T20:22:13.364+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-01-26T20:22:13.387+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

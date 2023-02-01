@@ -1,0 +1,26 @@
+[2023-01-20T18:32:42.348+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2023-01-18T00:00:00+00:00 [queued]>
+[2023-01-20T18:32:42.355+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2023-01-18T00:00:00+00:00 [queued]>
+[2023-01-20T18:32:42.355+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-20T18:32:42.355+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-01-20T18:32:42.355+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-20T18:32:42.365+0000] {taskinstance.py:1383} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-01-18 00:00:00+00:00
+[2023-01-20T18:32:42.369+0000] {standard_task_runner.py:55} INFO - Started process 123 to run task
+[2023-01-20T18:32:42.371+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extract_user', 'scheduled__2023-01-18T00:00:00+00:00', '--job-id', '288', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpnclyw0x9']
+[2023-01-20T18:32:42.372+0000] {standard_task_runner.py:83} INFO - Job 288: Subtask extract_user
+[2023-01-20T18:32:42.418+0000] {task_command.py:376} INFO - Running <TaskInstance: user_processing.extract_user scheduled__2023-01-18T00:00:00+00:00 [running]> on host a353ca64b4e2
+[2023-01-20T18:32:42.474+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-18T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-18T00:00:00+00:00
+[2023-01-20T18:32:42.475+0000] {http.py:121} INFO - Calling HTTP method
+[2023-01-20T18:32:42.481+0000] {base.py:71} INFO - Using connection ID 'user_api' for task execution.
+[2023-01-20T18:32:42.482+0000] {http.py:148} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-01-20T18:32:43.150+0000] {http.py:125} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Jayden","last":"Simmons"},"location":{"street":{"number":5103,"name":"Mockingbird Ln"},"city":"Independence","state":"Wisconsin","country":"United States","postcode":70779,"coordinates":{"latitude":"88.8773","longitude":"-78.0538"},"timezone":{"offset":"-8:00","description":"Pacific Time (US & Canada)"}},"email":"jayden.simmons@example.com","login":{"uuid":"7d2886fa-d3cd-4dd2-a0d2-594320af2dda","username":"ticklishdog407","password":"1970","salt":"1nVZZYiM","md5":"6e713f8130ce8c06f8293efcd8c53737","sha1":"bb146a106852a1a6fc2cc1ae8a53dc2d2a78dacf","sha256":"ea8fc00add7c9fbe73f24643814e3492a4a7b1a9950c8bcde29bc8342639d6f3"},"dob":{"date":"1976-08-13T03:34:55.232Z","age":46},"registered":{"date":"2008-03-01T14:57:46.874Z","age":14},"phone":"(306) 918-8663","cell":"(827) 762-2511","id":{"name":"SSN","value":"298-16-5026"},"picture":{"large":"https://randomuser.me/api/portraits/men/24.jpg","medium":"https://randomuser.me/api/portraits/med/men/24.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/24.jpg"},"nat":"US"}],"info":{"seed":"9cbe850713875593","results":1,"page":1,"version":"1.4"}}
+[2023-01-20T18:32:43.168+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extract_user, execution_date=20230118T000000, start_date=20230120T183242, end_date=20230120T183243
+[2023-01-20T18:32:43.186+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-01-20T18:32:43.206+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

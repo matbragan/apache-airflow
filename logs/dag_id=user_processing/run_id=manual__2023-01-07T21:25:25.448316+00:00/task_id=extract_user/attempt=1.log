@@ -1,0 +1,26 @@
+[2023-01-07T21:25:26.930+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user manual__2023-01-07T21:25:25.448316+00:00 [queued]>
+[2023-01-07T21:25:26.937+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user manual__2023-01-07T21:25:25.448316+00:00 [queued]>
+[2023-01-07T21:25:26.937+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-07T21:25:26.937+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-01-07T21:25:26.937+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-07T21:25:26.948+0000] {taskinstance.py:1383} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-01-07 21:25:25.448316+00:00
+[2023-01-07T21:25:26.952+0000] {standard_task_runner.py:55} INFO - Started process 599 to run task
+[2023-01-07T21:25:26.954+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extract_user', 'manual__2023-01-07T21:25:25.448316+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpzu4b8uuf']
+[2023-01-07T21:25:26.955+0000] {standard_task_runner.py:83} INFO - Job 21: Subtask extract_user
+[2023-01-07T21:25:26.997+0000] {task_command.py:376} INFO - Running <TaskInstance: user_processing.extract_user manual__2023-01-07T21:25:25.448316+00:00 [running]> on host 274e1da73cdf
+[2023-01-07T21:25:27.044+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-07T21:25:25.448316+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-07T21:25:25.448316+00:00
+[2023-01-07T21:25:27.045+0000] {http.py:121} INFO - Calling HTTP method
+[2023-01-07T21:25:27.052+0000] {base.py:71} INFO - Using connection ID 'user_api' for task execution.
+[2023-01-07T21:25:27.052+0000] {http.py:148} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-01-07T21:25:27.304+0000] {http.py:125} INFO - {"results":[{"gender":"female","name":{"title":"Mrs","first":"Lily","last":"Walker"},"location":{"street":{"number":4238,"name":"Simcoe St"},"city":"Melbourne","state":"Nunavut","country":"Canada","postcode":"H8D 9I0","coordinates":{"latitude":"-68.0037","longitude":"107.4784"},"timezone":{"offset":"+5:45","description":"Kathmandu"}},"email":"lily.walker@example.com","login":{"uuid":"be9c6d98-a3f5-4e7f-ac2b-81ba24d5e0ce","username":"sadlion175","password":"brighton","salt":"n7w6C8lX","md5":"621aae5f7460d760c63634d9be22aee2","sha1":"b927f9f07dc13808ddd2f0a25fc433d4d343f101","sha256":"a343cac3293d7e50d2dbcbf1b302b5074a796693a0dc8e2bba5e920ad5060a4c"},"dob":{"date":"1986-12-03T11:46:03.341Z","age":36},"registered":{"date":"2015-12-02T17:51:58.262Z","age":7},"phone":"G83 X07-8184","cell":"Y39 Y15-1234","id":{"name":"SIN","value":"816616692"},"picture":{"large":"https://randomuser.me/api/portraits/women/13.jpg","medium":"https://randomuser.me/api/portraits/med/women/13.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/13.jpg"},"nat":"CA"}],"info":{"seed":"e5ce12f6c0fc4675","results":1,"page":1,"version":"1.4"}}
+[2023-01-07T21:25:27.333+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extract_user, execution_date=20230107T212525, start_date=20230107T212526, end_date=20230107T212527
+[2023-01-07T21:25:27.367+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-01-07T21:25:27.394+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
